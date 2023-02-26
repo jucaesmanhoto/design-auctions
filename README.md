@@ -1,9 +1,16 @@
-<h1 style="color:red;">INITIAL INSTRUCTIONS</h1>
-Clone o repositório para a sua máquina, por 
-exemplo:
+<h1>INITIAL INSTRUCTIONS</h1>
+Go to the directory you want to clone the project and run
 
 ```bash
 git clone git@github.com:jucaesmanhoto/design-auctions.git
+```
+
+We'll be usign [this](https://github.com/rails/docked) project wrote by the Dhh and Nick Siger
+
+As their documentation says: Install [Docker](https://www.docker.com/products/docker-desktop/) (and [WSL](https://learn.microsoft.com/en-us/windows/wsl/install) on Windows). Then copy'n'paste into your terminal:
+
+```bash
+docker volume create ruby-bundle-cache
 ```
 
 If you'd like to have the standard Ruby and Rails bins available without writing `docked` before each command, you can add them as aliases to your zshrc:
