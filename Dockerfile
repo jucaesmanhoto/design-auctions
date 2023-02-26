@@ -17,8 +17,7 @@ ENV PATH="/bundle/ruby/3.2/bin:${PATH}"
 # # Install Rails
 
 COPY . .
-RUN gem install rails
-RUN bundle install
+RUN gem install rails && bundle install && yarn install
 
 # Ensure binding is always 0.0.0.0, even in development, to access server from outside container
 ENV BINDING="0.0.0.0"
