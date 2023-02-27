@@ -1,4 +1,4 @@
-<h1>INITIAL INSTRUCTIONS</h1>
+<h1>SETTING UP</h1>
 Go to the directory you want to clone the project and run
 
 ```bash
@@ -12,22 +12,15 @@ cd design-auctions
 
 Make some alias to help you in the long or most common commands
 ```bash
-alias ownership='sudo chown -R $USER:$USER .'
-alias dcu='docker-compose up'
-alias dcd='docker-compose down'
+dexec() {
+    docker exec -it $1 sh -c $2 
+}
+alias ownership='sudo chown -R $USER:$USER .' # run it if you see a permission denied error
 alias app-start='sh start.sh'
 alias app-init='sh init.sh'
 ```
 
-If you want an alias to run commands inside your container, you can add this to your zhsrc also:
-
-```bash
-dexec() {
-    docker exec -it $1 sh -c $2 
-}
-```
-
-You can run it passing the container name as firt parameter and the command at the end. Don't forget the quotes:
+To run commands inside your container, can run `dexec` passing the container name as firt parameter and the command at the end. Don't **forget the quotes**:
 ```bash
 dexec container-name 'rails db:create db:migrate db:seed'
 ```
@@ -42,7 +35,7 @@ ownership
 
 ## INITIALIZATION (Only first run)
 ```bash
-app-niit
+app-init
 ```
 
 ## STARTING THE APP
