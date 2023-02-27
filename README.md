@@ -5,24 +5,18 @@ Go to the directory you want to clone the project and run
 git clone git@github.com:jucaesmanhoto/design-auctions.git
 ```
 
-We'll be usign [this](https://github.com/rails/docked) project wrote by the Dhh and Nick Siger
-
-As their documentation says: Install [Docker](https://www.docker.com/products/docker-desktop/) (and [WSL](https://learn.microsoft.com/en-us/windows/wsl/install) on Windows). Then copy'n'paste into your terminal:
-
+Navigate into the new directory
 ```bash
-docker volume create ruby-bundle-cache
+cd design-auctions
 ```
 
-If you'd like to have the standard Ruby and Rails bins available without writing `docked` before each command, you can add them as aliases to your zshrc:
-
+Make some alias to help you in the long or most common commands
 ```bash
-alias docked='docker run --rm -it -v ${PWD}:/app -v ruby-bundle-cache:/bundle -p 3000:3000 ghcr.io/rails/cli'
-alias dr='docked rails'
-alias dr-dev='docked bin/dev'
-alias dr-bundle='docked bundle'
-alias dr-yarn='docked yarn'
-alias dr-rake='docked rake'
-alias dr-gem='docked gem'
+alias ownership='sudo chown -R $USER:$USER .'
+alias dcu='docker-compose up'
+alias dcd='docker-compose down'
+alias app-start='sh start.sh'
+alias app-init='sh init.sh'
 ```
 
 If you want an alias to run commands inside your container, you can add this to your zhsrc also:
@@ -40,13 +34,18 @@ dexec container-name 'rails db:create db:migrate db:seed'
 
 If you are running Docker on Linux, the files `rails new` created are owned by
 root. This happens because the container runs as the root user. If this is the
-case, you can use this alias change the ownership of the new files, after adding it to your zshrc.
+case, after adding it to your zshrc, you can use this alias change the ownership of the new files.
 
 ```bash
-alias ownership='sudo chown -R $USER:$USER .'
+ownership
 ```
 
-## RUNNING THE APP
+## INITIALIZATION (Only first run)
 ```bash
-docker compose up
+app-niit
+```
+
+## STARTING THE APP
+```bash
+start-app
 ```
