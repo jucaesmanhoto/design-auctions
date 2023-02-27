@@ -1,6 +1,6 @@
 <h1>SETTING UP</h1>
 
-First, you you don't have the Docker installed, you can do it clicking [here](https://www.docker.com/products/docker-desktop/) - to open in a new tab, press CMD(Mac) or CTRL(Win) and click - download and install it. We'll need it to go further.
+First, if you don't have the Docker installed, you can do it clicking [here](https://www.docker.com/products/docker-desktop/) - to open in a new tab, press CMD(Mac) or CTRL(Win) and click - download and install it. We'll need it to go further.
 
 While you wait the download, let's create some aliases to help you with most repetitive commands
 ```bash
