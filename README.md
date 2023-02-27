@@ -13,7 +13,7 @@ alias app-start='sh start.sh' #  run every time you want to start the app.
                               # It will run migrations and gem or packegesinstalations
 ```
 
-To run commands inside your container, you can run `dexec`, passing the container name as first parameter and the command at the end. **<h3>Don't forget the quotes</h3>**
+To run commands inside your container, you can run `dexec`, passing the container name as first parameter and the command at the end. <div class='alert alert-success'>Don't forget the quotes</div>
 
 Exemples:
 ```bash
