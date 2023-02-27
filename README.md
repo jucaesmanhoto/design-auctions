@@ -14,7 +14,7 @@ alias app-start='sh start.sh' #  run every time you want to start the app.
 ```
 
 To run commands inside your container, you can run `dexec`, passing the container name as first parameter and the command at the end. 
-> :alert: **Alert:** Don't forget the quotes!
+> :rotating_light: **Alert:** Don't forget the quotes!
 
 Exemples:
 ```bash
